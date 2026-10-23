@@ -1,0 +1,76 @@
+{
+  "name": "Choose Wisely",
+  "baseLevel": "Umbrellas",
+  "difficulty": 3,
+  "surface": "Asphalt",
+  "borders": "Concrete",
+  "scenery": [
+    { "prop": "Asphalt/CitySkyScraper", "count": 2, "scale": 0.25 },
+    { "prop": "Asphalt/CitySkyScraper_003", "count": 1, "scale": 0.2 },
+    { "prop": "Asphalt/CityCrane", "count": 2, "scale": 0.3 }
+  ],
+  "pieces": [
+    { "type": "R001B101", "count": 3 },
+    {
+      "type": "R078B111",
+      "split": [
+        [
+          { "type": "Chute" },
+          { "type": "R001B101", "count": 2 },
+          { "type": "R004B101", "slope": "up" },
+          { "type": "gap", "drop": 5 },
+          { "type": "R001B101", "count": 3, "surface": "Ice" },
+          { "type": "R001B101", "count": 2 }
+        ],
+        [
+          { "type": "R018B101", "turn": "right" },
+          { "type": "R001B101", "count": 2 },
+          { "type": "R018B101", "turn": "left" },
+          { "type": "R012B101", "count": 5, "slope": "down" },
+          { "type": "R001B101", "count": 8 },
+          { "type": "R018B101", "turn": "left" },
+          { "type": "R001B101", "count": 2 },
+          { "type": "R018B101", "turn": "right" }
+        ]
+      ],
+      "merge": { "type": "R078B111" }
+    },
+    { "type": "R001B101" },
+    { "type": "R018B101", "turn": "right" },
+    {
+      "type": "R078B111",
+      "split": [
+        [
+          { "type": "R018B101", "turn": "left" },
+          { "type": "R001B101", "count": 3 },
+          { "type": "R018B101", "turn": "right" },
+          { "type": "R001B101", "count": 2 },
+          { "type": "R018B101", "turn": "left" },
+          { "type": "R018B101", "turn": "right" },
+          { "type": "R001B101", "count": 2 },
+          { "type": "R018B101", "turn": "right" },
+          { "type": "R018B101", "turn": "left" },
+          { "type": "R018B101", "turn": "right" },
+          { "type": "R001B101", "count": 6 },
+          { "type": "R018B101", "turn": "left" }
+        ],
+        [
+          { "type": "R001B101", "count": 3 },
+          { "type": "R001B101", "count": 2, "surface": "Ice" },
+          { "type": "R004B101", "slope": "up", "surface": "Ice" },
+          { "type": "gap", "drop": 5 },
+          { "type": "R001B101", "count": 2, "surface": "Ice" },
+          { "type": "R004B101", "slope": "up", "surface": "Ice" },
+          { "type": "gap", "drop": 5 },
+          { "type": "R001B101", "surface": "Ice" },
+          { "type": "R018B101", "turn": "right", "surface": "Ice" },
+          { "type": "R018B101", "turn": "left", "surface": "Ice" },
+          { "type": "R001B101", "surface": "Ice" }
+        ]
+      ],
+      "merge": { "type": "R078B111" }
+    },
+    { "type": "R001B101" },
+    { "type": "R000B101", "finish": true }
+  ]
+}

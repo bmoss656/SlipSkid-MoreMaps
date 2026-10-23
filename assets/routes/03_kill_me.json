@@ -1,0 +1,47 @@
+{
+  "name": "Kill Me",
+  "baseLevel": "Taiga",
+  "difficulty": 5,
+  "surface": "Asphalt",
+  "borders": "Concrete",
+  "scenery": [
+    { "prop": "Ice/Iceberg_003", "count": 2, "scale": 0.3 },
+    { "prop": "Ice/Iceberg_010", "count": 2, "scale": 0.25 }
+  ],
+  "pieces": [
+    { "type": "R001B101", "count": 2 },
+
+    { "type": "R001B101", "count": 3, "surface": "Ice" },
+    { "type": "R018B101", "turn": "left", "surface": "Reverse" },
+    { "type": "R018B101", "turn": "right", "surface": "Reverse" },
+    { "type": "R001B101", "count": 2, "surface": "Ice" },
+    { "type": "R068B101", "turn": "left", "from": "Danibugne", "surface": "Ice" },
+    { "type": "R001B101", "count": 2, "surface": "Reverse" },
+    { "type": "R017B101", "turn": "right", "surface": "Reverse" },
+    { "type": "R017B101", "turn": "left", "surface": "Reverse" },
+    { "type": "R001B101", "surface": "Reverse" },
+
+    { "type": "R012B101", "slope": "up", "count": 2, "surface": "Reverse" },
+    { "type": "R001B101", "surface": "Ice" },
+    { "type": "R012B101", "slope": "down", "count": 2, "surface": "Ice" },
+    { "type": "R001B101", "count": 2, "surface": "Ice" },
+    { "type": "IceHairpin", "turn": "left" },
+
+    { "type": "R001B101", "surface": "Reverse" },
+    { "type": "R018B101", "turn": "right", "surface": "Reverse" },
+    { "type": "R018B101", "turn": "right", "surface": "Reverse" },
+    { "type": "R018B101", "turn": "left", "surface": "Reverse" },
+    { "type": "R001B101", "surface": "Ice" },
+    { "type": "R001B101", "surface": "Reverse" },
+    { "type": "R001B101", "surface": "Ice" },
+    { "type": "R001B101", "surface": "Reverse" },
+    { "type": "R001B101", "surface": "Ice" },
+    { "type": "R001B101", "surface": "Reverse" },
+
+    { "type": "R001B101", "count": 2 },
+    { "type": "R004B101", "slope": "up", "from": "Nice Ice" },
+    { "type": "gap", "drop": 5 },
+    { "type": "R001B101", "count": 2, "surface": "Reverse" },
+    { "type": "R000B101", "finish": true }
+  ]
+}

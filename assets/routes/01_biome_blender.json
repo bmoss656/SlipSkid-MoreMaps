@@ -1,0 +1,54 @@
+{
+  "name": "Biome Blender",
+  "baseLevel": "Aqueduc",
+  "difficulty": 4,
+  "surface": "Asphalt",
+  "borders": "Concrete",
+  "scenery": [
+    { "prop": "Sand/SandArch", "count": 1, "scale": 0.8 },
+    { "prop": "Dirt/Tree_007", "count": 2, "scale": 0.6 },
+    { "prop": "Ice/Iceberg_003", "count": 1, "scale": 0.3 },
+    { "prop": "Dirt/Moai", "count": 1, "scale": 0.6 },
+    { "prop": "Sand/Cactus_015", "count": 2, "scale": 1.0 }
+  ],
+  "pieces": [
+    { "type": "R001B101", "count": 3 },
+    { "type": "R012B101", "slope": "down" },
+
+    { "type": "R001B101", "count": 3, "surface": "Sand" },
+    { "type": "SandCanyon", "turn": "left" },
+    { "type": "R001B101", "surface": "Sand" },
+    { "type": "R018B101", "turn": "right", "surface": "Sand" },
+    { "type": "R001B101", "surface": "Sand" },
+
+    { "type": "R001B101", "count": 2 },
+    { "type": "R004B101", "slope": "up", "from": "Nice Ice" },
+    { "type": "gap", "drop": 4 },
+    { "type": "R012B101", "slope": "down", "surface": "Mud" },
+    { "type": "R001B101", "count": 2, "surface": "Mud" },
+
+    { "type": "R068B101", "turn": "right", "from": "Danibugne", "surface": "Dirt" },
+    { "type": "R001B101", "count": 2, "surface": "Dirt" },
+    { "type": "R069B101", "turn": "left", "from": "Danibugne", "surface": "Dirt" },
+    { "type": "R001B101", "count": 2, "surface": "Dirt" },
+
+    { "type": "R018B101", "turn": "right" },
+    { "type": "R012B101", "slope": "up", "count": 2 },
+    { "type": "R013B101", "slope": "up" },
+    { "type": "R001B101" },
+    { "type": "R004B101", "slope": "down", "from": "Nice Ice" },
+    { "type": "R012B101", "slope": "down" },
+    { "type": "R018B101", "turn": "right" },
+
+    { "type": "R012B101", "slope": "down", "surface": "Ice" },
+    { "type": "R001B101", "count": 2, "surface": "Ice" },
+    { "type": "IceHairpin", "turn": "left" },
+    { "type": "R001B101", "count": 2, "surface": "Ice" },
+
+    { "type": "R001B101", "count": 2 },
+    { "type": "R004B101", "slope": "up", "from": "Nice Ice" },
+    { "type": "gap", "drop": 3 },
+    { "type": "R001B101", "count": 8, "surface": "Magma" },
+    { "type": "R000B101", "finish": true }
+  ]
+}

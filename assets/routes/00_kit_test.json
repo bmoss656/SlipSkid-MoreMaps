@@ -1,0 +1,25 @@
+{
+  "name": "Kit Test",
+  "baseLevel": "Pizza pizza",
+  "difficulty": 1,
+  "borders": "Magma",
+  "scenery": [
+    { "prop": "Asphalt/CitySkyScraper", "count": 2, "scale": 0.25 },
+    { "prop": "Asphalt/CityCrane", "count": 1, "scale": 0.3 }
+  ],
+  "pieces": [
+    { "type": "R001B101", "count": 3 },
+    { "type": "R021B101", "turn": "right" },
+    { "type": "R001B101", "count": 2 },
+    { "type": "R012B101", "slope": "down" },
+    { "type": "R001B101", "count": 2 },
+    { "type": "R018B101", "turn": "left" },
+    { "type": "R001B101", "count": 3 },
+    { "type": "R017B101", "turn": "left" },
+    { "type": "R017B101", "turn": "right" },
+    { "type": "R001B101", "count": 2 },
+    { "type": "R018B101", "turn": "right" },
+    { "type": "R001B101", "count": 2 },
+    { "type": "R000B101", "finish": true }
+  ]
+}

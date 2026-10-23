@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Machine-specific paths (GameDir, BepInExDir) live in local.props, which is git-ignored. -->
+  <Import Project="local.props" Condition="Exists('local.props')" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>SlipSkid.MoreMaps</AssemblyName>
+    <RootNamespace>SlipSkid.MoreMaps</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <GameDir Condition="'$(GameDir)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Slip &amp; Skid</GameDir>
+    <Managed>$(GameDir)\Slip &amp; Skid_Data\Managed</Managed>
+    <BepInExDir Condition="'$(BepInExDir)' == ''">$(GameDir)\BepInEx</BepInExDir>
+    <BepInExCore>$(BepInExDir)\core</BepInExCore>
+    <PluginDir Condition="'$(PluginDir)' == ''">$(BepInExDir)\plugins\MoreMaps</PluginDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="$(BepInExCore)\BepInEx.Core.dll" Private="false" />
+    <Reference Include="$(BepInExCore)\BepInEx.Unity.Mono.dll" Private="false" />
+    <Reference Include="$(BepInExCore)\0Harmony.dll" Private="false" />
+    <Reference Include="$(Managed)\Assembly-CSharp.dll" Private="false" />
+    <Reference Include="$(Managed)\UnityEngine.dll" Private="false" />
+    <Reference Include="$(Managed)\UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="$(Managed)\UnityEngine.PhysicsModule.dll" Private="false" />
+    <Reference Include="$(Managed)\UnityEngine.AudioModule.dll" Private="false" />
+    <Reference Include="$(Managed)\Unity.Netcode.Runtime.dll" Private="false" />
+    <Reference Include="$(Managed)\Unity.InputSystem.dll" Private="false" />
+    <Reference Include="$(Managed)\Newtonsoft.Json.dll" Private="false" />
+    <Reference Include="$(Managed)\UnityEngine.ImageConversionModule.dll" Private="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Track data and level-select pictures, copied next to the DLL keeping their subfolders. -->
+    <ModAssets Include="assets\**\*.json;assets\**\*.png" />
+  </ItemGroup>
+
+  <Target Name="CheckPaths" BeforeTargets="ResolveAssemblyReferences">
+    <Error Condition="!Exists('$(Managed)\Assembly-CSharp.dll')" Text="Game not found. Set GameDir in local.props (currently: $(GameDir))." />
+    <Error Condition="!Exists('$(BepInExCore)\BepInEx.Core.dll')" Text="BepInEx not found. Set BepInExDir in local.props (currently: $(BepInExDir))." />
+  </Target>
+
+  <Target Name="CopyToPlugins" AfterTargets="Build">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(PluginDir)" />
+    <Copy SourceFiles="@(ModAssets)" DestinationFiles="@(ModAssets->'$(PluginDir)\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+  </Target>
+</Project>

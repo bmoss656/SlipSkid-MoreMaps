@@ -1,0 +1,35 @@
+{
+  "name": "The Cannon",
+  "baseLevel": "Core 7 meltdown",
+  "difficulty": 4,
+  "surface": "Asphalt",
+  "borders": "Concrete",
+  "startRise": 35,
+  "scenery": [
+    { "prop": "Magma/CarSkin_Accessory_Tank_002", "count": 2, "scale": 0.6 },
+    { "prop": "Sand/SandStone_009", "count": 2, "scale": 0.8 },
+    { "prop": "Sand/SandArch", "count": 1, "scale": 0.8 },
+    { "prop": "Sand/Cactus_008", "count": 2, "scale": 1.0 }
+  ],
+  "pieces": [
+    { "type": "R001B101", "count": 5 },
+    { "type": "Cannon", "speed": 72, "pitch": 22, "aim": 0 },
+    { "type": "gap", "count": 8, "drop": 20 },
+    { "type": "R163B101", "count": 8 },
+    { "type": "R001B101" },
+    { "type": "R021B101", "turn": "right" },
+    { "type": "R001B101", "count": 4, "surface": "Magma" },
+    { "type": "R001B101" },
+    { "type": "R004B101", "slope": "up" },
+    { "type": "gap", "drop": 5 },
+    { "type": "R001B101", "count": 2 },
+    { "type": "SandCanyon", "turn": "left" },
+    { "type": "R018B101", "turn": "left", "from": "Danibugne" },
+    { "type": "R018B101", "turn": "right", "from": "Danibugne" },
+    { "type": "R163B101", "count": 6 },
+    { "type": "R021B101", "turn": "right" },
+    { "type": "Chute" },
+    { "type": "R001B101", "count": 2 },
+    { "type": "R000B101", "finish": true }
+  ]
+}
