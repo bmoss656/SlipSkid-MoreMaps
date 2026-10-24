@@ -1,20 +1,20 @@
 # SlipSkid-MoreMaps
 
-Custom tracks for Slip & Skid (BepInEx 6 plugin, prototype).
+Custom tracks for Slip & Skid (BepInEx 6 plugin). Published on Thunderstore as MoreMaps.
 
 A custom track is a copy of a vanilla level: same scene, scenery, lighting and music, with the vanilla road
 hidden and a new road laid out from the scene's own road pieces, described in a small JSON file in `routes/`.
 
-Levels so far:
-- **Kit Test** (on Pizza pizza): the prototype, about 270 m.
-- **Biome Blender** (on Aqueduc): about 975 m through sand (with Danibugne's sand canyon hairpin), a mud bog,
-  dirt banked corners, an asphalt climb, an ice descent into Nice Ice's banked hairpin, and a 70 m magma
+Levels (the release ships these four; the prototype **Kit Test**, on Pizza pizza, is in `tools/dev-routes/`:
+copy it into `routes/` to try it):
+- **Biome Blender** (on Aqueduc): about 1 km through sand (with Danibugne's sand canyon hairpin), a mud bog,
+  dirt banked corners, an asphalt climb, an ice descent into Nice Ice's banked hairpin, and an 80 m magma
   sprint, with two jumps. Don't stop on the magma: 3 seconds on it
   burns you out.
 - **Choose Wisely** (on Umbrellas): two forks. First: a half-pipe chute, a jump and an icy run-out, or a
   longer, grippy detour. Then: a short icy run with two jumps and an icy S-bend, or a long, easy detour. 640 to
   870 m depending on your choices.
-- **Kill Me** (on Taiga): about 650 m of ice and reversed-steering road woven together, with banked ice corners,
+- **Kill Me** (on Taiga): about 670 m of ice and reversed-steering road woven together, with banked ice corners,
   a tight reversed chicane and a straight that flips between ice and Reverse every 10 m. Reverse comes from
   the Good Cards mod; without it those tiles are ice.
 - **The Cannon** (on Core 7 meltdown): drive straight into a giant cannon that fires you 130 m out and 20 m

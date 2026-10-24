@@ -13,7 +13,7 @@ public class Plugin : BaseUnityPlugin
     // Never change Guid after release: it names every player's config file.
     public const string Guid = "slipskid.moremaps";
     public const string Name = "More Maps";
-    public const string Version = "0.0.1";
+    public const string Version = "0.1.0";
 
     internal static ManualLogSource Log;
     internal static string Dir;

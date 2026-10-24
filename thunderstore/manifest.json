@@ -1,0 +1,9 @@
+{
+  "name": "MoreMaps",
+  "version_number": "0.1.0",
+  "website_url": "https://github.com/bmoss656/SlipSkid-MoreMaps",
+  "description": "Four new tracks for Slip & Skid: a biome mash-up, a map of forks where you choose your road, an ice and reversed-steering gauntlet, and a giant cannon. Everyone in the lobby needs the same version.",
+  "dependencies": [
+    "SlipSkid_Modding-BepInExPack_SlipSkid-6.0.697"
+  ]
+}

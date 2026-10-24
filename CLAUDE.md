@@ -18,6 +18,13 @@ Sister mod: GoodCards (`E:\ModDev\SlipAndSkipCards\SlipSkid-GoodCards`), same pa
 - Launch ONLY through Steam: `Start-Process explorer.exe -ArgumentList "steam://rungameid/2651350"`.
   Never run `Slip & Skid.exe` directly (breaks BepInEx loading for later Steam launches).
 
+## Release
+`powershell -ExecutionPolicy Bypass -File tools\package.ps1` -> `dist/MoreMaps-<version>.zip` (Thunderstore layout,
+store files in `thunderstore/`, icon from `tools\make_icon.ps1`). Bump `Plugin.Version` and
+`thunderstore/manifest.json` together (the script checks) and add a CHANGELOG line. Any change to the route list
+(added, removed, renamed, reordered) needs at least a minor version bump. Dev-only routes live in
+`tools/dev-routes/` (not shipped).
+
 ## How it works
 - `src/Levels/CustomLevels.cs`: one level per `routes/*.json` (sorted by file name), a copy of its base `Level`
   appended to `LevelManager.levels` on every machine.
